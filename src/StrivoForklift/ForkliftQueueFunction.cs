@@ -1,4 +1,4 @@
-using System.Text.Json;
+﻿using System.Text.Json;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Logging;
 using StrivoForklift.Data;
@@ -25,7 +25,7 @@ public class ForkliftQueueFunction
 
     [Function(nameof(ForkliftQueueFunction))]
     public async Task Run(
-        [QueueTrigger("consumethis", Connection = "StorageQueue")] string rawMessage)
+        [QueueTrigger("ingest-queue-sara", Connection = "StorageQueue")] string rawMessage)
     {
         _logger.LogInformation("Dequeued raw message: {RawMessage}", rawMessage);
 
