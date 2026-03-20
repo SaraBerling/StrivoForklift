@@ -1,4 +1,4 @@
-# Docs for the Azure Web Apps Deploy action: https://github.com/azure/functions-action
+﻿# Docs for the Azure Web Apps Deploy action: https://github.com/azure/functions-action
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
 name: Build and deploy dotnet core project to Azure Function App - func-forklift-sara
@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 env:
-  AZURE_FUNCTIONAPP_PACKAGE_PATH: '.' # set this to the path to your web app project, defaults to the repository root
+  AZURE_FUNCTIONAPP_PACKAGE_PATH: 'src/StrivoForklift' # set this to the path to your web app project, defaults to the repository root
   DOTNET_VERSION: '8.0' # set this to the dotnet version to use
 
 jobs:
